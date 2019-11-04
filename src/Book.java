@@ -1,11 +1,15 @@
+import java.util.Scanner;
+
 public class Book {
     private String bookTitle;
     private String author;
     private String description;
     private double price;
-    private String inStock;
+    private boolean inStock;
+    //default constructor
     public Book(){}
-    public Book(String bookTitle, String author, String description, double price, String inStock){
+    //overleaoded constructor
+    public Book(String bookTitle, String author, String description, double price, boolean inStock){
     this.author = bookTitle;
     this.author = author;
     this.description = description;
@@ -42,16 +46,18 @@ public class Book {
         this.price = price;
     }
 
-    public String inStock() {
+    public boolean inStock() {
         return inStock;
     }
 
-    public void setInStock(String inStock) {
+    public void setInStock(boolean inStock) {
         this.inStock = inStock;
     }
 
 
     public void  getDisplayText(){
-        System.out.println("Book Name: " + bookTitle + "\nAuthor " + author + "\nDiscription: " + description + "\nPrice: " + price + "\nIn Stock: " + inStock );
+        System.out.println("Book Name: " + bookTitle + "\nAuthor " + author + "\nDiscription: " + description + "\nPrice: " + price );
     }
+
+
 }
